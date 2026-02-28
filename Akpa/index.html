@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Osward | Personal Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        /* Menu Button */
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            background: white;
+            color: #333;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: #1f1f1f;
+            overflow-x: hidden;
+            transition: 0.4s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background: #444;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            min-height: 100vh;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Background Colors */
+        #home { background: linear-gradient(135deg, #667eea, #130c1a); }
+        #about { background: linear-gradient(135deg, #1b0f14, #245270); }
+        #skills { background: linear-gradient(135deg, #5e3932, #0d1312); }
+        #contact { background: linear-gradient(135deg, #190230, #653a43); }
+
+        img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 20px 0;
+        }
+
+        ul { list-style:none; padding:0; font-size:18px; }
+        ul li { margin: 10px 0; }
+
+    </style>
+</head>
+<body>
+
+<!-- Menu Button -->
+<div class="menu-btn" onclick="openMenu()">☰</div>
+
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+    <span class="close-btn" onclick="closeMenu()">×</span>
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About Me</a>
+    <a href="#skills" onclick="closeMenu()">My Skills</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- Home Section -->
+<section id="home">
+    <h1 style="font-size:50px; font-weight:bold; margin:20px 0;">Welcome to My Website!</h1>
+    <img src="AHRINA (1).jpg" alt="Osward Picture">
+    <p style="font-size:20px; max-width:600px; margin:auto; line-height:1.6;">
+        Hi! I’m <strong>Osward</strong>, a passionate <strong>web developer</strong>. 
+        I create beautiful and responsive websites.
+    </p>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h1>About Me</h1>
+    <img src="AHRINA (2).jpg" alt="Osward Picture">
+    <p style="max-width:700px; margin:auto; line-height:1.8; font-size:18px;">
+        Hello! My name is Osward. I am passionate about web development 
+        and love creating modern, responsive websites. I enjoy learning 
+        new technologies and improving my skills every day.
+    </p>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h1>My Skills</h1>
+    <ul>
+        <li>✔ HTML</li>
+        <li>✔ CSS</li>
+        <li>✔ JavaScript</li>
+        <li>✔ Website Design</li>
+        <li>✔ Problem Solving</li>
+    </ul>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h1>Contact Me</h1>
+    <p>📞 Phone: +233599257875</p>
+    <p>📧 Email: akpaosward78@gmail.com</p>
+    <p>📘 Facebook: facebook.com/ahrinaosward</p>
+</section>
+
+<script>
+    function openMenu() {
+        document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeMenu() {
+        document.getElementById("mySidebar").style.width = "0";
+    }
+</script>
+
+</body>
+</html>
