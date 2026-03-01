@@ -47,7 +47,17 @@ body {
   color: #fff;
   font-size: 1.5em;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 10px; /* spacing between images */
+}
 
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 .profile-section {
   text-align: center;
   margin: 20px 0;
